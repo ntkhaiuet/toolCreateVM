@@ -2,12 +2,12 @@ import PySimpleGUI as sg
 import os
 
 layout = [  [sg.Text('Select VM configuration', font=('Arial',15, 'bold'))],
-            [sg.Radio('Windows 10, 2 CPU, 4GB RAM, 32GB Disk', 1, enable_events=True, font=('Arial',13), key='-R1-')],
-            [sg.Radio('Windows 10, 2 CPU, 6GB RAM, 50GB Disk',1, enable_events=True, font=('Arial',13), key='-R2-')],
-            [sg.Radio('Windows 10, 4 CPU, 8GB RAM, 64GB Disk',1, enable_events=True, font=('Arial',13), key='-R3-')],
-            [sg.Radio('Ubuntu, 1 CPU, 2GB RAM, 16GB Disk',1, enable_events=True, font=('Arial',13), key='-R4-')],
-            [sg.Radio('Ubuntu, 2 CPU, 4GB RAM, 32GB Disk',1, enable_events=True, font=('Arial',13), key='-R5-')],
-            [sg.Radio('Ubuntu, 4 CPU, 8GB RAM, 64GB Disk',1, enable_events=True, font=('Arial',13), key='-R6-')],
+            [sg.Radio('Windows 10, 2 vCPUs, 4GB Memory, 32GB Hard disk', 1, enable_events=True, font=('Arial',13), key='-R1-')],
+            [sg.Radio('Windows 10, 2 vCPUs, 6GB Memory, 50GB Hard disk',1, enable_events=True, font=('Arial',13), key='-R2-')],
+            [sg.Radio('Windows 10, 4 vCPUs, 8GB Memory, 64GB Hard disk',1, enable_events=True, font=('Arial',13), key='-R3-')],
+            [sg.Radio('Ubuntu, 1 vCPUs, 2GB Memory, 16GB Hard disk',1, enable_events=True, font=('Arial',13), key='-R4-')],
+            [sg.Radio('Ubuntu, 2 vCPUs, 4GB Memory, 32GB Hard disk',1, enable_events=True, font=('Arial',13), key='-R5-')],
+            [sg.Radio('Ubuntu, 4 vCPUs, 8GB Memory, 64GB Hard disk',1, enable_events=True, font=('Arial',13), key='-R6-')],
             [sg.Text('Path to VMware OVF Tool:', font=('Arial', 15, 'bold'))],
             [sg.In( visible=False), sg.Input(key='-PATH-', font=('Arial', 13), default_text='C:\Program Files\VMware\VMware OVF Tool'), sg.FileBrowse('Browse', target='-DIR-', font=('Arial', 10, 'bold'))],
             [sg.Text('Datastore', font=('Arial',15, 'bold'))],
